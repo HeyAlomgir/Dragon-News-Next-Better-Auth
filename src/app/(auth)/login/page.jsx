@@ -30,10 +30,15 @@ const LoginPage = () => {
                         className="input"
                          placeholder="Enter Your Email"
                          {...register("email",{ required: "Password field is required", })} />
+
+
+                         {errors.email && (
+                            <p className="text-red-500">{errors.email.message}</p>
+                         )}
                           
                        
                     </fieldset>
-
+     
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend">Password</legend>
                         <input type="password" 
@@ -42,7 +47,7 @@ const LoginPage = () => {
                         {...register("password",{ required: "Password field is required", })} />
 
                         {errors.password &&  (
-                            <p>{errors.password.message}</p>
+                            <p className="text-red-500">{errors.password.message}</p>
                         ) }
                         
                        
