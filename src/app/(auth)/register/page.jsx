@@ -13,6 +13,7 @@ const LoginPage = () => {
 
     const handleLoginFunc = (data)=>{
         console.log(data);
+
       
 
      
